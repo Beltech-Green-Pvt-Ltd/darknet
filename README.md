@@ -475,7 +475,10 @@ classes=2
 
 4. Put image-files (.jpg) of your objects in the directory `build\darknet\x64\data\obj\`
 5. You should label each object on images from your dataset. Use this visual GUI-software for marking bounded boxes of objects and generating annotation files for Yolo v2 & v3: https://github.com/AlexeyAB/Yolo_mark
-
+6. If you are using LabelMe annotations use process_annotation.py script. For that first place all your annotations in Annotations folder and create an empty folder YOLO-Annotations. Change the class maps n the script appropriately as per your need and run the following to create dataset as per yolo requirements
+```shell
+python3 process_annotation.py
+```
 It will create `.txt`-file for each `.jpg`-image-file - in the same directory and with the same name, but with `.txt`-extension, and put to file: object number and object coordinates on this image, for each object in new line:
 
 `<object-class> <x_center> <y_center> <width> <height>`
